@@ -66,7 +66,7 @@ graph TD
 
 ## How to Run
 
-- **`make playground`**: Runs the local ADK web server. Navigate to http://localhost:18081 to interact with the agent in the browser.
+- **`make playground`**: Runs the local ADK web server. Navigate to http://127.0.0.1:18081 to interact with the agent in the browser.
 - **`make run`**: Launches the agent as a local FastAPI web server at http://localhost:8080.
 - **`make test`**: Runs unit and integration test suites using pytest.
 
@@ -142,15 +142,16 @@ You can find the timed presentation narration script in [DEMO_SCRIPT.txt](file:/
 2. In your terminal, navigate into your project folder:
    ```bash
    cd style-match
-   git init
-   git add .
-   git commit -m "Initial commit: style-match ADK agent"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/style-match.git
-   git push -u origin main
+git init
+git add .
+git commit -m "Initial commit: style-match ADK agent"
+git branch -M main
+git remote add origin https://github.com/naitikchawla1/style-match.git
+git push -u origin main
    ```
-
-3. Verify .gitignore includes:
+ 
+3. Verify .gitignore incd style-match
+includes:
    ```text
    .env          ← your API key — must NEVER be pushed
    .venv/

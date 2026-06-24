@@ -21,7 +21,7 @@ Let's take a look at the system architecture. When a user submits a styling requ
 (pause)
 
 [2:00 — LIVE DEMO]
-(switch to playground at localhost:18081)
+(switch to playground at 127.0.0.1:18081)
 Now let's switch to the live playground to see it in action. I will input this message: "Hey, I need an outfit suggestion for my business meeting tomorrow in London. Let me know what to wear from my wardrobe. My contact email is support@stylematch.com and phone is +441234567890."
 
 (pause)
