@@ -1,0 +1,51 @@
+[0:00 — HOOK]
+Hello everyone. Have you ever stood in front of your wardrobe, trying to decide what to wear for an important event, while checking the weather outside, and wished someone would just coordinate it all for you? That is the problem StyleMatch solves. It is a secure, personalized concierge that orchestrates your styling decisions based on what you actually own and what the weather is doing.
+
+(pause)
+
+[0:20 — WHAT IT IS]
+StyleMatch belongs to the Concierge Agents track. It acts as an ambient style coordinator, using a multi-agent network to scan your closet, evaluate local forecasts, and refine outfit recommendations through a collaborative human-in-the-loop workflow.
+
+(pause)
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see on the banner, StyleMatch is built to be Automated, Secure, and Intelligent. It bridges the gap between static styling databases and real-time environmental data.
+
+(pause)
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's take a look at the system architecture. When a user submits a styling request, it first enters the security checkpoint node. This node scrubs any personal identifiable information like emails or phone numbers, detects prompt injections, and logs metadata. If everything is clean, the request travels to our main orchestrator agent. The orchestrator delegates to two specialized sub-agents: the wardrobe agent, which calls the local Model Context Protocol server to fetch the user's clothes, and the weather matcher agent, which queries the MCP server for the local forecast. Once they return suggestions, the orchestrator combines them and sends the output to the outfit approval checkpoint. Here, we pause the workflow to wait for human input. If the user approves, it routes to final output and saves the selection to their diary; if not, it loops back to the orchestrator to revise the choices based on user feedback.
+
+(pause)
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+Now let's switch to the live playground to see it in action. I will input this message: "Hey, I need an outfit suggestion for my business meeting tomorrow in London. Let me know what to wear from my wardrobe. My contact email is support@stylematch.com and phone is +441234567890."
+
+(pause)
+
+Notice how the security checkpoint immediately scrubbed my email and phone number to [EMAIL_REDACTED] and [PHONE_REDACTED] in the logs. Now the orchestrator is running. It called the wardrobe agent to fetch items like my navy blazer, and then called the weather matcher agent, which used our MCP weather tool to detect that tomorrow in London will be rainy and windy.
+
+(pause)
+
+Here is the recommendation: a navy blue blazer, white cotton shirt, and chinos, combined with a waterproof raincoat and black oxford shoes. Notice how the workflow is now paused at the outfit approval checkpoint. Let's type: "No, can we do a denim jacket instead?" and hit send.
+
+(pause)
+
+The checkpoint captures my feedback, populates the session state, and redirects the flow back to the orchestrator. As you can see, the orchestrator has now updated the outfit to include the dark blue denim jacket instead of the blazer. I will type "Yes, looks perfect" to approve.
+
+(pause)
+
+Now the workflow terminates successfully, and the orchestrator calls the save_selected_outfit tool to log this outfit in my style diary.
+
+(pause)
+
+[3:00 — SECURITY & MCP]
+To summarize, our security checkpoint ensures that user query data remains completely sanitized, blocking any prompt injections and maintaining structured JSON audit logs for system observability. Our local MCP server bridges the agent with external wardrobe inventories and live weather APIs, giving the LLM precise local context.
+
+(pause)
+
+[3:30 — IMPACT / CLOSE]
+StyleMatch demonstrates how multi-agent coordination, local protocol tools, and human-in-the-loop feedback loops can create a highly secure, reliable, and tailored styling experience. It takes the guesswork out of dressing up, making sure you are always styled perfectly for both the weather and the occasion. Thank you.
