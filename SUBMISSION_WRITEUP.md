@@ -35,10 +35,10 @@ graph TD
 
 ## Concepts Used
 
-1. **ADK 2.0 Workflow API**: Used to design the execution flow graph in [app/agent.py](file:///c:/Users/NAITIK%20CHAWLA/Documents/adk-workspace/style-match/app/agent.py#L143-L162).
-2. **LlmAgent**: Used for specialized sub-agents (`wardrobe_agent`, `weather_matcher_agent`) and the central `orchestrator_agent` in [app/agent.py](file:///c:/Users/NAITIK%20CHAWLA/Documents/adk-workspace/style-match/app/agent.py#L32-L79).
-3. **AgentTool**: Handled sub-agent delegation (`wardrobe_agent` and `weather_matcher_agent` tool parameters) in [app/agent.py](file:///c:/Users/NAITIK%20CHAWLA/Documents/adk-workspace/style-match/app/agent.py#L55-L60).
-4. **MCP Server**: Implemented as a stdio server in [app/mcp_server.py](file:///c:/Users/NAITIK%20CHAWLA/Documents/adk-workspace/style-match/app/mcp_server.py) to manage clothes and retrieve simulated weather forecasts.
+1. **ADK 2.0 Workflow API**: Used to design the execution flow graph in [app/agent.py](app/agent.py#L143-L162).
+2. **LlmAgent**: Used for specialized sub-agents (`wardrobe_agent`, `weather_matcher_agent`) and the central `orchestrator_agent` in [app/agent.py](app/agent.py#L32-L79).
+3. **AgentTool**: Handled sub-agent delegation (`wardrobe_agent` and `weather_matcher_agent` tool parameters) in [app/agent.py](app/agent.py#L55-L60).
+4. **MCP Server**: Implemented as a stdio server in [app/mcp_server.py](app/mcp_server.py) to manage clothes and retrieve simulated weather forecasts.
 5. **Security Checkpoint Node**: An entry gate node (`security_checkpoint`) protecting the model from prompt injections and PII leaks.
 6. **Agents CLI**: Scaffolding, dependency syncing, and playground testing managed via `agents-cli` toolbelt.
 

@@ -128,7 +128,7 @@ graph TD
 
 ## Demo Script
 
-You can find the timed presentation narration script in [DEMO_SCRIPT.txt](file:///c:/Users/NAITIK%20CHAWLA/Documents/adk-workspace/style-match/DEMO_SCRIPT.txt). Use this script to walk through the system's workflow, agents, security filters, and interactive demo cases.
+You can find the timed presentation narration script in [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt). Use this script to walk through the system's workflow, agents, security filters, and interactive demo cases.
 
 ---
 
