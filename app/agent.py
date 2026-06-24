@@ -130,7 +130,7 @@ async def outfit_approval_checkpoint(ctx: Context, node_input: str) -> Any:
 
     # Check if we have a resume input from HITL
     if ctx.resume_inputs and "outfit_approval" in ctx.resume_inputs:
-        user_response = ctx.resume_inputs["outfit_approval"]
+        user_response = ctx.resume_inputs.pop("outfit_approval")
         
         # Parse the user response
         user_response_str = str(user_response).lower()
