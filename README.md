@@ -32,7 +32,7 @@ StyleMatch is an intelligent personal styling concierge agent that acts as a sma
    ```bash
    make playground
    ```
-   Opens the interactive testing panel at [http://localhost:18081](http://localhost:18081).
+   Opens the interactive testing panel at [http://127.0.0.1:18081](http://127.0.0.1:18081).
 
 ---
 
@@ -67,7 +67,7 @@ graph TD
 ## How to Run
 
 - **`make playground`**: Runs the local ADK web server. Navigate to http://127.0.0.1:18081 to interact with the agent in the browser.
-- **`make run`**: Launches the agent as a local FastAPI web server at http://localhost:8080.
+- **`make run`**: Launches the agent as a local FastAPI web server at http://127.0.0.1:8080.
 - **`make test`**: Runs unit and integration test suites using pytest.
 
 ---
